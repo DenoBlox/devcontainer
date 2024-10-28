@@ -3,6 +3,7 @@
 {
     "name": "DenoContainer",
     "dockerFile": "Dockerfile",
+    "runArgs": ["--init", "--privileged", "--name", "DenoContainer"],
     "mounts": [
         "source=dind-var-lib-docker,target=/var/lib/docker,type=volume",
         "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
