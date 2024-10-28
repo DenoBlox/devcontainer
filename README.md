@@ -12,9 +12,13 @@ Follow these simple steps:
 
     `cd my-project`
 
-2. Execute the shell script which will do all the initial work for you of installing deno and useful Visual Studio Code extensions:
+2. Execute the shell script which will create the files required to create a devcontainer. In this instance we will be ready to work with Deno.
 
     `read -p "Enter the project name: " project_name &&  curl -s https://raw.githubusercontent.com/DenoBlox/devcontainer/refs/heads/main/new_project.sh > deno_boot.sh && source deno_boot.sh && rm deno_boot.sh` 
+
+3. Run VSCODE which will then prompt you to reopen the folder using the new devcontainer definition created above:
+
+    `code .`
 
 ## About devcontainers
 
