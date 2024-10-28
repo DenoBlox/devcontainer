@@ -6,41 +6,15 @@ This repository contains a template for Deno and common VS code extensions.
 
 Follow these simple steps:
 
-1. Clone the repository
+1. Create a new folder for your project and set it as the current directory 
     
-    `git clone git@github.com:DenoBlox/devcontainer.git`
+    `mkdir my-project`
 
-2. Rename the folder to your own project name
+    `cd my-project`
 
-    `mv devcontainer my-project-name`
+2. Execute the shell script which will do all the initial work for you of installing deno and useful Visual Studio Code extensions:
 
-3. Change into the newly cloned folder
-    
-    `cd my-project-name`
-
-4. Remote the git folder which will then enable you to setup git with your own project code, as you can not commit any code to the template repository itself.
-
-    `rm -rf .git`
-
-5. Launch VSCODE
-
-    Note: The .ssh folder on your computer is automatically mounted into the devcontainer, so your github SSH keys are automatically available.
-
-    `code .`
-
-6. Open the project using devcontainers.
-    
-    VSCODE will pop up a message offering the option to `Reopen in Container`
-
-    The first time, VSCODE will build the container which will take a few moments.
-
-    Subsequently, VSCODE will open your project using the devcontainer automatically.
-
-7. Personalise the devcontainer for your project
-    
-    Edit `.devcontainer/devcontainer.json`
-    
-    Set the name property and add any other VSCODE extensions that you require, such as copilot, or postgres admin etc. You can add anything you like and it will be loaded into VSCODE when you rebuild the container.
+    `read -p "Enter the project name: " project_name &&  curl -s https://raw.githubusercontent.com/DenoBlox/devcontainer/refs/heads/main/new_project.sh > deno_boot.sh && source deno_boot.sh && rm deno_boot.sh` 
 
 ## About devcontainers
 

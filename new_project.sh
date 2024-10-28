@@ -1,8 +1,9 @@
 #!/bin/bash
 mkdir -p .devcontainer
 
+echo "Creating project for '$project_name'"
+
 if [ ! -f ".devcontainer/devcontainer.json" ]; then
-    read -p "Enter the project name: " project_name
     curl -s https://raw.githubusercontent.com/DenoBlox/devcontainer/refs/heads/main/.devcontainer/devcontainer.json \
         | sed "s/DenoContainer/$project_name/g" \
         > .devcontainer/devcontainer.json
