@@ -4,7 +4,7 @@ mkdir -p .devcontainer
 echo "Creating project for '$project_name'"
 
 if [ ! -f ".devcontainer/devcontainer.json" ]; then
-    curl -s https://raw.githubusercontent.com/DenoBlox/devcontainer/refs/heads/main/.devcontainer/devcontainer.json?v=123 \
+    curl -s https://raw.githubusercontent.com/DenoBlox/devcontainer/refs/heads/main/.devcontainer/devcontainer.json \
         | sed "s/DenoContainer/$project_name/g" \
         > .devcontainer/devcontainer.json
 
