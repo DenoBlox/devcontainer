@@ -1,7 +1,7 @@
 #!/bin/bash
 mkdir -p .devcontainer
 
-echo "Creating project for '$project_name'"
+echo "Creating new Deno project for '$project_name'"
 
 if [ ! -f ".devcontainer/devcontainer.json" ]; then
     curl -s https://raw.githubusercontent.com/DenoBlox/devcontainer/refs/heads/main/.devcontainer/devcontainer.json \
