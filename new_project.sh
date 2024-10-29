@@ -10,12 +10,15 @@ if [ ! -f ".devcontainer/devcontainer.json" ]; then
 
     echo "devcontainer name is: '$project_name'"
 else
-    echo ".devcontainer/devcontainer.json already exists and can not be changed by this script"
+    echo "Skipped .devcontainer/devcontainer.json, file already exists and can not be changed by this script"
 fi
 
-if [ ! -f ".devcontainer/Dockerfile" ]; then
-    curl -s https://raw.githubusercontent.com/DenoBlox/devcontainer/refs/heads/main/.devcontainer/Dockerfile > .devcontainer/Dockerfile
-else
-    echo ".devcontainer/Dockerfile already exists and can not be changed by this script"
-fi
+
+files=".devcontainer/Dockerfile deno.json main.ts"
+
+for file in $files; do
+    if [ ! -f "$file" ]; then
+        curl -s https://raw.githubusercontent.com/DenoBlox/devcontainer/refs/heads/main/$file > $file
+    fi
+done
 
