@@ -2,7 +2,7 @@
 
 ## Getting Started 
 
-This repository contains a template for Deno and common VS code extensions. 
+This repository contains a template VSCODE devcontainer for Deno with common useful VSCODE extensions. It is a rapid way to get a Deno development environment running in an isolated container, so you don't pollute or complicate your host computer with many competing technologies.
 
 Follow these simple steps:
 
