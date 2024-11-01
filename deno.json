@@ -1,8 +1,8 @@
 {
-    "tasks":{
-        "start":"deno --allow-net main.ts"
+    "tasks": {
+        "start": "deno --allow-net main.ts"
     },
     "fmt": {
         "exclude": ["**/*.md"]
-      }
+    }
 }
