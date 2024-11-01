@@ -14,6 +14,8 @@ Follow these simple steps:
 
 2. Execute the shell script which will create the files required to create a devcontainer. In this instance we will be ready to work with Deno.
 
+    If you have run this process previously and wish to overwrite you current devcontainer config, or deno.json then answer `yes`, specifically in lower case, when asked if you wish to overwrite files.
+
     ```bash
     read -p "Enter the project name: " project_name && \
     read -p "Overwrite files (respond with 'yes' otherwise files will not be overwritten): " ovrwrt && \
